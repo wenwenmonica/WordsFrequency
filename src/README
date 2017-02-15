@@ -1,0 +1,18 @@
+
+Programming Questions:
+Implement a program to count the frequency of words in a text file. The text file is partitioned into N segments.
+Each segment is processed by a separate thread that out- puts the intermediate frequency count for its segment.
+The main process waits until all the threads complete; then it computes the consolidated word-frequency data based
+on the individual threads’ output.
+
+
+Solution:
+Use the HashMap to store the frequency of words of each thread
+1. Split the text into several segments;
+2. Merge the results.
+
+Input File: TestFile.txt
+Source Code File: SingleCounter, WordCounter, and the main class is CountingProcess.
+
+This Java Program is configurable. Two options are provided in the arguments: counting file name and number of threads.
+The number of threads is 5 in the program, we can modify the number.
